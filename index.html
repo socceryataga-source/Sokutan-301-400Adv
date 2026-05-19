@@ -20,8 +20,8 @@
       <section id="menuScreen" class="card menu-card">
         <h2>出題設定</h2>
         <div class="settings-grid">
-          <label class="field"><span>開始番号</span><input id="startNo" type="number" min="301" max="400" value="301" /></label>
-          <label class="field"><span>終了番号</span><input id="endNo" type="number" min="301" max="400" value="400" /></label>
+          <label class="field"><span>開始番号</span><input id="startNo" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="301" aria-label="開始番号" /></label>
+          <label class="field"><span>終了番号</span><input id="endNo" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="400" aria-label="終了番号" /></label>
         </div>
         <div class="mode-box" role="radiogroup" aria-label="出題順">
           <label class="mode-option selected"><input type="radio" name="mode" value="ordered" checked /><span>順番通り</span></label>
@@ -33,7 +33,7 @@
       <section id="quizScreen" class="card quiz-card hidden">
         <div class="quiz-topbar">
           <div><div id="progressText" class="progress-text">1 / 100</div><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div></div>
-          <button id="backMenuBtn" class="ghost-btn">メニューに戻る</button>
+          <div class="quiz-nav-actions"><button id="prevBtn" class="ghost-btn prev-btn">← 前の問題へ</button><button id="backMenuBtn" class="ghost-btn">メニューに戻る</button></div>
         </div>
         <div class="question-number" id="questionNumber">No. 1</div>
         <div id="jpText" class="jp-text"></div>
